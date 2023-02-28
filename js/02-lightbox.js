@@ -10,10 +10,10 @@ function createMarkup(items) {
         .map(({preview, original, description}) => {
             return `
             <a class="gallery__item" href="${original}">
-            <img class="gallery__image" src="${preview}" title="${description}" alt="${description}" />
+            <img class="gallery__image" src="${preview}" alt="${description}" />
             </a>
     `;
     }).join(' ');
 };
 
-var lightbox = new SimpleLightbox('.gallery__item', { captionsData: 'href', captionsDelay: 250, });
+var lightbox = new SimpleLightbox('.gallery__item', { captionsData: 'alt', captionsDelay: 250, });
